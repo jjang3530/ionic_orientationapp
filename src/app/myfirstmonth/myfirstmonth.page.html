@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      My First Month
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <ion-item [routerLink] ="['/detailpage', page.contentId]" routerDirection="forward" *ngFor="let page of pageData">
+          <!-- <ion-icon slot="start" [name]="page.icon"></ion-icon> -->
+          <ion-label>
+            {{page.title}}
+          </ion-label>
+        </ion-item>
+    </ion-list>
+  </ion-content>

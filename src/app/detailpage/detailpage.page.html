@@ -1,0 +1,39 @@
+<ion-header *ngIf="pageData">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+      [text]="buttonText"
+      [icon]="buttonIcon">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{pageData.title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="pageData">
+    <div class="singleImageViewContainer">
+        <ion-img src={{pageData.bannerImage.url}} alt="image error"></ion-img>
+
+    <div class="singleViewContent">
+        <h1 class="detailViewTitle top-left">{{pageData.title}}</h1>
+        
+        <div class="singleViewDescription" padding>
+          <div [innerHTML]="pageData.webText"></div>
+          <br/>
+    </div>
+    <ion-row>   
+        <h4>International: {{pageData.international}}</h4>
+    </ion-row>
+    <ion-row>   
+        <h4>Campus: {{pageData.campus}}</h4>
+    </ion-row>
+    <ion-row>   
+        <h4>Link: <a href={{pageData.originalTextLocation.url}}>originalTextLocation</a></h4>
+    </ion-row>
+
+    </div>
+  </div>
+</ion-content>
+

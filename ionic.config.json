@@ -1,0 +1,7 @@
+{
+  "name": "OrientationApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
